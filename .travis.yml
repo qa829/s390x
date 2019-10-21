@@ -1,0 +1,33 @@
+arch: s390x
+
+install: skip
+
+script:
+# Environment information
+- echo "==> Environment information"
+- uname -a
+- cat /etc/os-release
+- grep ^processor /proc/cpuinfo
+- free -m
+- df -h
+
+# Snaps
+- echo "==> Snaps"
+- sudo snap install core || true
+- sudo snap install core
+- sudo snap install hello-world
+- hello-world
+
+# Sleep
+#- sleep 600
+
+# Docker
+- echo "==> Docker"
+- docker info
+- docker run hello-world
+
+# # # ruby
+# # - echo "==> Ruby"
+# # - ruby -v
+# # - gem i bundler
+# # #- sleep 120
