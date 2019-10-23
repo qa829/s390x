@@ -1,8 +1,33 @@
+notifications:
+  email: false
+
+# language: bash
+# dist: bionic
+  
+# compiler:
+#   - gcc
+#   - clang
+
 arch: s390x
+
+# install:
+#   - pip install --user numpy
+
+# rvm:
+# - 2.6.4
+# - 2.6.3
+# - 2.6.2
+
+# dist: xenial
+# language: bash
+
+# go:
+# - 1.12.x
+# - 1.13.x
 
 jobs:
   include:
-  - name: dest-and-lang-default
+  - name: dist-and-lang-default
   - dist: xenial
     name: xenial-lang-default
   - dist: bionic
@@ -20,6 +45,22 @@ jobs:
     name: bionic-c
     language: c
   - dist: xenial
+    name: xenial-go
+    language: go
+    script: go version
+  - dist: bionic
+    name: bionic-go
+    language: go
+    script: go version
+  - dist: xenial
+    name: xenial-python
+    language: python
+    script: python -V
+  - dist: bionic
+    name: bionic-python
+    language: python
+    script: python -V
+  - dist: xenial
     name: xenial-minimal
     language: minimal
   - dist: bionic
@@ -32,7 +73,16 @@ jobs:
     name: bionic-slim
     language: slim
 
-install: skip
+# cache:
+#   directories:
+#    - /home/travis/.rvm/
+     
+# env:
+# - BUILD=1
+# - BUILD=2
+# - BUILD=3
+
+#install: skip
 
 script:
 # Environment information
@@ -59,7 +109,7 @@ script:
 - docker run hello-world
 
 # # # ruby
-# # - echo "==> Ruby"
-# # - ruby -v
-# # - gem i bundler
+- echo "==> Ruby"
+- ruby -v
+#- gem i bundler
 # # #- sleep 120
