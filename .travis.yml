@@ -66,12 +66,12 @@ jobs:
   - dist: bionic
     name: bionic-minimal
     language: minimal
-  - dist: xenial
-    name: xenial-slim
-    language: slim
-  - dist: bionic
-    name: bionic-slim
-    language: slim
+#   - dist: xenial
+#     name: xenial-slim
+#     language: slim
+#   - dist: bionic
+#     name: bionic-slim
+#     language: slim
 
 # cache:
 #   directories:
