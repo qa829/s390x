@@ -1,4 +1,4 @@
-language: minimal
+language: ruby
 dist: bionic
 # jobs:
 #   include:
@@ -36,10 +36,10 @@ arch:
 # # install:
 # #   - pip install --user numpy
 
-# rvm:
-# - 2.6.4
-# - 2.6.3
-# - 2.6.2
+rvm:
+- 2.6.4
+- 2.6.3
+- 2.6.2
 
 # arch: arm64
 # dist: xenial
