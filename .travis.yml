@@ -1,5 +1,5 @@
 language: ruby
-dist: bionic
+dist: xenial
 # jobs:
 #   include:
 #     - jdk: openjdk9
@@ -37,9 +37,19 @@ arch:
 # #   - pip install --user numpy
 
 rvm:
+- 2.6.5
 - 2.6.4
 - 2.6.3
 - 2.6.2
+- 2.6.1
+- 2.6.0
+- 2.5.0
+- 2.5.1
+- 2.5.2
+- 2.5.3
+- 2.5.4
+- 2.5.5
+- 2.5.6
 
 # arch: arm64
 # dist: xenial
