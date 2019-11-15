@@ -1,5 +1,7 @@
 language: ruby
-dist: bionic
+dist: xenial
+git:
+  clone: false
 
 before_install:
 - sudo apt update -yqq && sudo apt install dnsutils -y
