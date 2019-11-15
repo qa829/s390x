@@ -94,6 +94,8 @@ jobs:
   - dist: bionic
     name: bionic-go
     language: go
+    install:
+    - pwd
     script:
     - go version
   - dist: xenial
