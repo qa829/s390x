@@ -4,6 +4,7 @@ git:
   clone: false
 
 before_install:
+- echo "attempts:8" >> /etc/resolv.conf
 - sudo apt update -yqq && sudo apt install dnsutils -y
 - nslookup github.com
 - nslookup google.com
