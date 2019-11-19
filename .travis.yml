@@ -7,17 +7,17 @@ before_install:
 # - sudo sed '/^options timeout/d' /etc/resolv.conf
 # - echo "attempts:8" | sudo tee -a /etc/resolv.conf
 # - echo "options timeout:3" | sudo tee -a /etc/resolv.conf
-- |
-tee /etc/resolv.conf &>/dev/null <<EOF
-nameserver 1.1.1.1
-nameserver 8.8.8.8
-nameserver 1.0.0.1
-nameserver 8.8.4.4
+# - |
+# tee /etc/resolv.conf &>/dev/null <<EOF
+# nameserver 1.1.1.1
+# nameserver 8.8.8.8
+# nameserver 1.0.0.1
+# nameserver 8.8.4.4
 
-options timeout:1
-options attempts:10
-options rotate
-EOF
+# options timeout:1
+# options attempts:10
+# options rotate
+# EOF
 - cat /etc/resolv.conf
 - sudo apt update -yqq && sudo apt install dnsutils -y
 - nslookup github.com
